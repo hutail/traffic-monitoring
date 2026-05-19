@@ -104,7 +104,7 @@ cat > /usr/local/bin/check_bandwidth.sh <<EOF
 #!/bin/bash
 
 # =========================================================
-# AWS Lightsail 实时流量监控版
+# 实时流量监控
 # =========================================================
 
 VPS_NAME="$VPS_NAME"
@@ -347,7 +347,7 @@ CRON_JOB="*/30 * * * * /usr/local/bin/check_bandwidth.sh"
 echo
 echo ">>> 发送测试邮件..."
 
-echo "[$VPS_NAME] AWS Lightsail 邮件测试成功" | mail -s "[$VPS_NAME] 测试邮件" "$ALERT_EMAIL"
+echo "[$VPS_NAME] 邮件测试成功" | mail -s "[$VPS_NAME] 测试邮件" "$ALERT_EMAIL"
 
 # =========================================================
 # 首次运行
