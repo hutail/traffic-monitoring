@@ -43,7 +43,8 @@ echo "请提前准备 Google 应用专用密码："
 echo "https://myaccount.google.com/apppasswords"
 echo
 
-read -s -p "请输入 Gmail 应用专用密码: " GMAIL_APP_PASSWORD
+read -p "请输入 Gmail 应用专用密码: " GMAIL_APP_PASSWORD
+GMAIL_APP_PASSWORD=$(echo "$GMAIL_APP_PASSWORD" | xargs)
 
 echo
 echo
