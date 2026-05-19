@@ -75,7 +75,7 @@ curl
 echo
 echo ">>> 配置 Gmail SMTP..."
 
-cat > ~/.msmtprc <<EOF
+cat > /etc/msmtprc <<EOF
 defaults
 auth           on
 tls            on
@@ -91,7 +91,7 @@ password       $GMAIL_APP_PASSWORD
 account default : gmail
 EOF
 
-chmod 600 ~/.msmtprc
+chmod 600 /etc/msmtprc
 
 # =========================================================
 # 创建监控脚本
